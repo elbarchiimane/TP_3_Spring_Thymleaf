@@ -19,8 +19,8 @@ public class TpSpringMvcThymeleafApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-    patientRepository.save(new Patient(null,"Mohamed",new Date(),false,34));
-    patientRepository.save(new Patient(null,"Hanane",new Date(),true,35));
+    patientRepository.save(new Patient(null,"Mohamed",new Date(),false,200));
+    patientRepository.save(new Patient(null,"Hanane",new Date(),true,600));
     patientRepository.save(new Patient(null,"Imane",new Date(),false,287));
     }
 }
