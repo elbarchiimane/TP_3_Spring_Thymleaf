@@ -1,4 +1,6 @@
 # TP_3_Spring_Thymleaf
+https://github.com/elbarchiimane/TP_3_Spring_Thymleaf/assets/115666913/a88cb724-0300-4a42-a7d0-b70ce75c5ff4
+
 <h2> Home Page </h2>
 <img src="captures/Home_page.png" />
 <h2> Add Patient </h2>
