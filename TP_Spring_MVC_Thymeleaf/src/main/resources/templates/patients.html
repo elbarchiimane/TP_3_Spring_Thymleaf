@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="template1.html">
+layout:decorate="template.html">
 <head>
     <meta charset="UTF-8">
     <title>Patient</title>
@@ -29,12 +29,12 @@ layout:decorate="template1.html">
                         <td th:text="${p.dateNaissance}"></td>
                         <td th:text="${p.malade}"></td>
                         <td th:text="${p.score}"></td>
-                        <td>
-                            <a onclick="javascript:return confirm('Are you sure?')" class="btn btn-danger" th:href="@{delete(id=${p.id},keyword=${keyword},page=${currentPage})}">
+                        <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+                            <a onclick="javascript:return confirm('Are you sure?')" class="btn btn-danger" th:href="@{/delete(id=${p.id},keyword=${keyword},page=${currentPage})}">
                                 <i class="bi bi-trash"></i>
                             </a>
                         </td>
-                        <td>
+                        <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
                             <a class="btn btn-success" th:href="@{/editPatient(id=${p.id})}">Edit</a>
                         </td>
                     </tr>
